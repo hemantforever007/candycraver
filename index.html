@@ -3,13 +3,21 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Handmade Chocolates | Gifts • Parties • Corporate & Bulk</title>
-  <meta name="description" content="Premium handmade chocolates for individual gifting, parties, and business supply. Bulk & custom orders welcome. Call or WhatsApp to order."/>
-  <meta property="og:title" content="Handmade Chocolates – Premium Gifts & Bulk Orders" />
-  <meta property="og:description" content="Small‑batch, handcrafted chocolates for everyone — from birthday boxes to corporate hampers. Call or WhatsApp to order." />
+  <title>Handmade Chocolates Delhi NCR | Corporate Gifts Gurgaon | CandyCraver Noida</title>
+  <meta name="description" content="Premium handmade chocolates in Delhi NCR, Gurgaon, Noida. Corporate gifts, bulk orders, wedding favors, birthday gifts. Fresh homemade chocolates delivered. Custom packaging available."/>
+  <meta name="keywords" content="handmade chocolates Delhi, corporate gifts Gurgaon, bulk chocolates NCR, wedding chocolates Noida, birthday gifts Delhi, custom chocolates Gurgaon, chocolate hampers NCR, business gifts Delhi, artisan chocolates Noida, premium chocolates Gurgaon, chocolate gifts Delhi NCR, handcrafted chocolates Noida, corporate hampers Gurgaon, bulk chocolate orders Delhi, custom chocolate gifts NCR"/>
+  <meta property="og:title" content="Handmade Chocolates Delhi NCR | Corporate Gifts Gurgaon | CandyCraver" />
+  <meta property="og:description" content="Premium handmade chocolates in Delhi NCR. Corporate gifts, bulk orders, custom packaging. Fresh delivery in Gurgaon, Noida, Delhi." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="/cover.png" />
   <meta name="theme-color" content="#2b1d17" />
+  <meta name="geo.region" content="IN-HR" />
+  <meta name="geo.placename" content="Gurgaon, Haryana" />
+  <meta name="geo.position" content="28.4595;77.0266" />
+  <meta name="ICBM" content="28.4595, 77.0266" />
+  <meta name="author" content="CandyCraver" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <link rel="canonical" href="https://candycraver.com/" />
   <link rel="icon" href="/favicon.png" sizes="any">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600..900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -24,7 +32,7 @@
       --accent:#ffe6c6;
     }
     *{box-sizing:border-box}
-    html,body{height:100%}
+    html,body{height:100%; overflow-x:hidden; position:relative}
     body{
       margin:0; background:
         radial-gradient(1200px 700px at 120% -10%, #432c22 0%, transparent 60%),
@@ -34,61 +42,65 @@
       font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Helvetica,Arial,sans-serif;
       line-height:1.5;
       overflow-x:hidden;
+      width:100%;
+      max-width:100vw;
     }
+    * {max-width:100%; word-wrap:break-word}
     a{color:inherit}
-    .wrap{max-width:1320px;margin:0 auto;padding:28px}
-    header{position:relative; z-index:2; display:flex; align-items:center; justify-content:space-between; gap:16px}
-    .brand{display:flex;align-items:center;gap:14px;text-decoration:none}
+    .wrap{max-width:1320px;margin:0 auto;padding:0 28px; width:100%; min-width:0}
+    header{position:sticky; top:0; z-index:100; background:rgba(15,11,9,0.95); backdrop-filter:blur(12px); border-bottom:1px solid rgba(255,255,255,0.08); width:100vw; margin-left:calc(-50vw + 50%); box-sizing:border-box}
+    .header-content{display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; max-width:1320px; margin:0 auto; padding:16px 28px}
+    .brand{display:flex;align-items:center;gap:14px;text-decoration:none; flex:1; min-width:0}
     .logo{
       width:54px;height:54px; border-radius:16px; display:grid; place-items:center;
       background: conic-gradient(from 210deg, #3a241b, #6b3f2b, #3a241b);
       box-shadow:0 10px 28px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.06);
-      position:relative; overflow:hidden; font-size:26px
+      position:relative; overflow:hidden; font-size:26px; flex-shrink:0
     }
     .logo:after{content:""; position:absolute; inset:0; background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,.15) 50%, transparent 58%); transform: translateX(-120%); animation: sheen 6s infinite}
     @keyframes sheen{0%{transform:translateX(-120%)} 30%{transform:translateX(120%)} 100%{transform:translateX(120%)}}
-    .brand h1{font-family:"Playfair Display",serif; font-weight:800; font-size:clamp(22px,3.2vw,32px); letter-spacing:.2px; margin:0}
-    .tag{color:var(--muted); font-size:14px}
+    .brand h1{font-family:"Playfair Display",serif; font-weight:800; font-size:clamp(20px,3.2vw,32px); letter-spacing:.2px; margin:0}
+    .brand .tag{color:var(--muted); font-size:clamp(12px,2vw,14px)}
+    .phone{font-size:clamp(18px,3.4vw,30px); font-weight:800; color:var(--accent); white-space:nowrap}
 
-    .hero{position:relative; padding:90px 0 56px;}
-    .hero-grid{display:grid; grid-template-columns: 1.2fr .8fr; align-items:center; gap:min(6vw,64px)}
-    .headline{font-family:"Playfair Display",serif; font-size:clamp(44px,6.8vw,84px); line-height:1.04; margin:0 0 14px}
-    .sub{color:var(--muted); font-size: clamp(17px,2.1vw,20px); max-width:70ch}
+    .hero{position:relative; padding:120px 0 56px; width:100%; min-width:0}
+    .hero-grid{display:grid; grid-template-columns: 1.2fr .8fr; align-items:center; gap:min(6vw,64px); width:100%; min-width:0}
+    .headline{font-family:"Playfair Display",serif; font-size:clamp(36px,6.8vw,84px); line-height:1.08; margin:0 0 16px}
+    .sub{color:var(--muted); font-size: clamp(16px,2.1vw,20px); max-width:70ch; line-height:1.6}
 
-    .cta-row{display:flex;gap:14px; flex-wrap:wrap; margin-top:28px}
-    .btn{display:inline-flex; align-items:center; gap:10px; text-decoration:none; padding:16px 20px; border-radius:18px; font-weight:700; letter-spacing:.3px; border:1px solid rgba(255,255,255,.12); backdrop-filter: blur(8px)}
+    .cta-row{display:flex;gap:14px; flex-wrap:wrap; margin-top:32px}
+    .btn{display:inline-flex; align-items:center; gap:10px; text-decoration:none; padding:16px 24px; border-radius:18px; font-weight:700; letter-spacing:.3px; border:1px solid rgba(255,255,255,.12); backdrop-filter: blur(8px); font-size:16px}
     .btn.primary{background:linear-gradient(180deg, #ddbf87, #a48756); color:#24160f; box-shadow: 0 12px 26px rgba(197,165,114,.28)}
     .btn.ghost{color:var(--text); background:rgba(255,255,255,.07)}
-
-    .phone{font-size:clamp(22px,3.4vw,30px); font-weight:800; color:var(--accent)}
 
     .card{
       background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
       border:1px solid rgba(255,255,255,.1);
       border-radius:22px; padding:22px; box-shadow: 0 12px 32px rgba(0,0,0,.28);
+      width:100%; min-width:0;
     }
     .badges{display:flex; gap:8px; flex-wrap:wrap; margin:18px 0 0}
-    .badge{font-size:12px; padding:8px 11px; border-radius:999px; background:rgba(255,255,255,.07); border:1px dashed rgba(255,255,255,.14); color:var(--muted)}
+    .badge{font-size:12px; padding:8px 12px; border-radius:999px; background:rgba(255,255,255,.07); border:1px dashed rgba(255,255,255,.14); color:var(--muted); white-space:nowrap}
 
-    .showcase{display:grid; grid-template-columns:repeat(3,1fr); gap:14px}
+    .showcase{display:grid; grid-template-columns:repeat(3,1fr); gap:14px; width:100%; min-width:0}
     .tile{position:relative; aspect-ratio:1; border-radius:18px; overflow:hidden; background:
       radial-gradient(60% 80% at 70% 20%, rgba(255,255,255,.1), transparent 60%),
       linear-gradient(120deg, #6a3d2b, #3f241b);
-      box-shadow: 0 10px 30px rgba(0,0,0,.35);
+      box-shadow: 0 10px 30px rgba(0,0,0,.35); min-width:0
     }
-    .tile img{width:100%;height:100%;object-fit:cover;display:block}
+    .tile img{width:100%;height:100%;object-fit:cover;display:block; max-width:100%}
 
-    .grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
+    .grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; width:100%; min-width:0}
     .mini{padding:18px}
 
-    .section{margin:64px 0 0}
+    .section{margin:64px 0 0; width:100%; min-width:0}
     .section h3{font-family:"Playfair Display",serif; font-size:clamp(26px,3vw,34px); margin:0 0 12px}
     .muted{color:var(--muted)}
 
     /* Gallery */
-    .gallery{display:grid; grid-template-columns:repeat(4,1fr); gap:14px}
-    .gallery .g{position:relative; border-radius:18px; overflow:hidden; cursor:pointer;}
-    .gallery .g img{width:100%;height:100%;object-fit:cover; display:block; aspect-ratio:1}
+    .gallery{display:grid; grid-template-columns:repeat(4,1fr); gap:14px; width:100%; min-width:0}
+    .gallery .g{position:relative; border-radius:18px; overflow:hidden; cursor:pointer; min-width:0}
+    .gallery .g img{width:100%;height:100%;object-fit:cover; display:block; aspect-ratio:1; max-width:100%}
     .gallery .g:after{content:""; position:absolute; inset:0; background:linear-gradient(180deg, transparent, rgba(0,0,0,.18));}
 
     .lightbox{position:fixed; inset:0; background:rgba(0,0,0,.8); display:none; align-items:center; justify-content:center; z-index:50}
@@ -96,93 +108,165 @@
     .lightbox.open{display:flex}
 
     /* Contact */
-    .contact{display:grid; grid-template-columns: .9fr 1.1fr; gap:20px; align-items:start}
+    .contact{display:grid; grid-template-columns: .9fr 1.1fr; gap:20px; align-items:start; width:100%; min-width:0}
     .contact .big{font-size:clamp(22px,3vw,28px)}
-    form{display:grid; gap:12px}
-    .row{display:grid; grid-template-columns:1fr 1fr; gap:12px}
+    form{display:grid; gap:12px; width:100%}
+    .row{display:grid; grid-template-columns:1fr 1fr; gap:12px; width:100%; min-width:0}
     input, textarea, select{
-      background:rgba(255,255,255,.06); color:var(--text); border:1px solid rgba(255,255,255,.12); border-radius:14px; padding:12px 14px; font:inherit
+      background:rgba(255,255,255,.06); color:var(--text); border:1px solid rgba(255,255,255,.12); border-radius:14px; padding:12px 14px; font:inherit; width:100%; min-width:0; box-sizing:border-box
     }
     textarea{min-height:110px; resize:vertical}
     .hint{font-size:12px; color:var(--muted)}
 
-    .footer{padding:36px 0 80px; color:var(--muted); font-size:14px}
+    .footer{padding:36px 28px 80px; color:var(--muted); font-size:14px}
 
     /* Responsive */
     @media (max-width: 1000px){
-      .hero{padding:70px 0 36px}
+      .hero{padding:100px 0 36px}
       .hero-grid{grid-template-columns:1fr;}
       .gallery{grid-template-columns:repeat(3,1fr)}
       .contact{grid-template-columns:1fr}
     }
-    @media (max-width: 640px){
+    @media (max-width: 768px){
+      body{max-width:100vw; overflow-x:hidden}
+      .wrap{padding:0 20px; overflow-x:hidden; max-width:100vw}
+      .hero{padding:80px 0 36px}
       .gallery{grid-template-columns:repeat(2,1fr)}
-      .showcase{grid-template-columns:repeat(2,1fr)}
+      .showcase{grid-template-columns:repeat(2,1fr); gap:12px}
       .grid{grid-template-columns:1fr}
+      .header-content{gap:12px; padding:12px 20px}
+      .brand{gap:10px}
+      .logo{width:48px; height:48px; font-size:22px}
+      .card{padding:18px; border-radius:18px}
+      .tile{border-radius:14px}
+      .badges{gap:6px; margin:16px 0 0}
+      .badge{font-size:11px; padding:6px 10px}
+      .swirl{display:none}
+      .footer{padding:36px 20px 80px}
+      *{max-width:100%; word-wrap:break-word; overflow-wrap:break-word}
+    }
+    @media (max-width: 480px){
+      .wrap{padding:0 16px; overflow-x:hidden; max-width:100vw}
+      .hero{padding:70px 0 24px}
+      .section{margin:48px 0 0}
+      .showcase{grid-template-columns:repeat(2,1fr); gap:10px}
+      .cta-row{flex-direction:column; align-items:stretch; gap:12px}
+      .btn{text-align:center; min-height:48px; justify-content:center; padding:14px 20px}
+      .header-content{flex-direction:column; align-items:stretch; gap:12px; text-align:center; padding:12px 16px}
+      .brand{justify-content:center}
+      .phone{text-align:center}
+      .card{padding:16px; border-radius:16px}
+      .mini{padding:16px}
+      .gallery{gap:10px}
+      .tile{border-radius:12px}
+      .swirl{display:none}
+      .footer{padding:36px 16px 80px}
+    }
+    @media (max-width: 360px){
+      .showcase{grid-template-columns:1fr; gap:12px}
+      .badge{font-size:10px; padding:5px 8px}
+      .badges{justify-content:center}
     }
 
     /* Floating cocoa swirl */
-    .swirl{ position:absolute; inset:auto -10vw -20vh auto; width:min(70vw,1000px); height:min(70vw,1000px);
+    .swirl{ position:absolute; top:auto; right:0; bottom:-20vh; left:auto; width:min(70vw,1000px); height:min(70vw,1000px);
       filter: blur(40px) saturate(1.2); opacity:.25; pointer-events:none;
       background: radial-gradient(circle at 50% 50%, #6b3f2b, transparent 55%), radial-gradient(circle at 30% 20%, #342016, transparent 40%), radial-gradient(circle at 70% 70%, #8a5136, transparent 45%);
-      border-radius:50%; animation: floaty 22s ease-in-out infinite alternate}
-    @keyframes floaty{ from{transform:translate(10px, 0) rotate(0deg)} to{transform:translate(-30px, -20px) rotate(12deg)} }
+      border-radius:50%; animation: floaty 22s ease-in-out infinite alternate; transform:translateX(30%)}
+    @keyframes floaty{ from{transform:translateX(30%) rotate(0deg)} to{transform:translateX(10%) rotate(12deg)} }
   </style>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "Handmade Chocolates",
+    "name": "CandyCraver",
+    "alternateName": "CandyCraver Handmade Chocolates",
     "image": ["/cover.png"],
-    "description": "Handcrafted chocolates for gifts, parties, and bulk supply.",
-    "address": {"@type": "PostalAddress", "addressLocality": "Gurgaon", "addressRegion": "Haryana", "addressCountry": "IN"},
-    "areaServed": "India",
-    "telephone": "+91-8368022314"
+    "logo": "/favicon.png",
+    "description": "Premium handmade chocolates in Delhi NCR. Specializing in corporate gifts, bulk orders, wedding favors, and custom chocolate gifts. Fresh delivery in Gurgaon, Noida, Delhi.",
+    "address": {
+      "@type": "PostalAddress", 
+      "addressLocality": "Gurgaon", 
+      "addressRegion": "Haryana", 
+      "addressCountry": "IN",
+      "postalCode": "122001"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 28.4595,
+      "longitude": 77.0266
+    },
+    "areaServed": [
+      {"@type": "City", "name": "Gurgaon"},
+      {"@type": "City", "name": "Delhi"},
+      {"@type": "City", "name": "Noida"},
+      {"@type": "City", "name": "Faridabad"},
+      {"@type": "City", "name": "Greater Noida"}
+    ],
+    "telephone": "+91-8368022314",
+    "priceRange": "₹₹",
+    "openingHours": "Mo-Su 10:00-20:00",
+    "paymentAccepted": ["Cash", "Credit Card", "UPI", "Bank Transfer"],
+    "currenciesAccepted": "INR",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Chocolate Products",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Corporate Chocolate Gifts"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Wedding Chocolate Favors"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Bulk Chocolate Orders"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Custom Chocolate Hampers"}}
+      ]
+    }
   }
   </script>
 </head>
 <body>
   <div class="swirl" aria-hidden="true"></div>
-  <div class="wrap">
-    <header>
+  <header>
+    <div class="header-content">
       <a class="brand" href="#top" aria-label="Homepage">
         <div class="logo" aria-hidden="true">🍫</div>
         <div>
-          <h1>Handmade Chocolates</h1>
-          <div class="tag">Small‑batch • Eggless • Preservative‑free</div>
+          <h1>CandyCraver</h1>
+          <div class="tag">Handmade & homemade chocolates</div>
         </div>
       </a>
       <div class="phone">
         <a id="callLink" href="tel:+91-8368022314">+91‑8368022314</a>
       </div>
-    </header>
+    </div>
+  </header>
+
+  <div class="wrap">
 
     <main class="hero">
       <div class="hero-grid">
         <section>
-          <h2 class="headline">Premium, handcrafted chocolates for <span style="color:var(--gold)">gifts</span>, parties & businesses.</h2>
-          <p class="sub">From birthday boxes and festive hampers to event platters and logo‑stamped bars — we make fresh chocolate for <strong>individuals and corporates alike</strong>. Custom flavours, vegan on request, and personalised sleeves available.</p>
+          <h2 class="headline">Premium <span style="color:var(--gold)">handmade chocolates</span> in Delhi NCR for corporate gifts & bulk orders.</h2>
+          <p class="sub">Leading chocolate gifting service in <strong>Gurgaon, Noida & Delhi</strong>. From corporate hampers and wedding favors to birthday gifts and bulk orders — we craft fresh, artisan chocolates with custom packaging. Same-day delivery available across NCR.</p>
           <div class="badges">
-            <span class="badge">Individuals & Families</span>
-            <span class="badge">Parties & Weddings</span>
-            <span class="badge">Corporate & Bulk</span>
-            <span class="badge">100% Vegetarian</span>
-            <span class="badge">Gift‑ready Packaging</span>
+            <span class="badge">Delhi NCR Delivery</span>
+            <span class="badge">Corporate Gifts</span>
+            <span class="badge">Bulk Orders</span>
+            <span class="badge">Wedding Favors</span>
+            <span class="badge">Custom Packaging</span>
+            <span class="badge">Same Day Delivery</span>
           </div>
           <div class="cta-row">
             <a class="btn primary" id="waLink" href="#" target="_blank" rel="noopener">WhatsApp Now</a>
-            <a class="btn ghost" href="#contact">Leave your number/email</a>
+            <!-- <a class="btn ghost" href="#contact">Leave your number/email</a> -->
           </div>
         </section>
         <aside>
           <div class="card">
-            <div class="showcase" aria-label="Showcase of chocolate styles">
-              <div class="tile"><img src="/gallery/1.png" alt="Assorted bonbons" loading="lazy"></div>
-              <div class="tile"><img src="/gallery/6.png" alt="Roasted almond bark" loading="lazy"></div>
-              <div class="tile"><img src="/gallery/7.png" alt="Berry truffles" loading="lazy"></div>
-              <div class="tile"><img src="/gallery/4.png" alt="Sea‑salt caramel" loading="lazy"></div>
-              <div class="tile"><img src="/gallery/2.png" alt="Logo‑stamped bars" loading="lazy"></div>
-              <div class="tile"><img src="/gallery/3.png" alt="Gift hampers" loading="lazy"></div>
+            <div class="showcase" aria-label="Premium handmade chocolates Delhi NCR">
+              <div class="tile"><img src="/gallery/1.png" alt="Handmade bonbons corporate gifts Delhi" loading="lazy"></div>
+              <div class="tile"><img src="/gallery/6.png" alt="Artisan almond bark chocolates Gurgaon" loading="lazy"></div>
+              <div class="tile"><img src="/gallery/7.png" alt="Gourmet berry truffles Noida delivery" loading="lazy"></div>
+              <div class="tile"><img src="/gallery/4.png" alt="Custom chocolate bars corporate branding" loading="lazy"></div>
+              <div class="tile"><img src="/gallery/2.png" alt="Logo stamped chocolate bars NCR" loading="lazy"></div>
+              <div class="tile"><img src="/gallery/3.png" alt="Corporate chocolate hampers bulk orders" loading="lazy"></div>
             </div>
           </div>
         </aside>
@@ -190,35 +274,35 @@
 
       <section class="section grid">
         <div class="card mini">
-          <h3 style="margin:0 0 8px">For Individuals</h3>
-          <p class="muted">Birthday boxes, festive gifts, thank‑you packs. Choose 6/9/12/24‑piece assortments or custom bars.</p>
+          <h3 style="margin:0 0 8px">Personal Gifts Delhi NCR</h3>
+          <p class="muted">Birthday chocolate boxes, festive hampers, anniversary gifts. Delivered fresh across Gurgaon, Noida, Delhi. Custom chocolate bars available.</p>
         </div>
         <div class="card mini">
-          <h3 style="margin:0 0 8px">For Events</h3>
-          <p class="muted">Weddings, parties, corporate events. Dessert platters, return‑gifts, custom sleeves & tags.</p>
+          <h3 style="margin:0 0 8px">Wedding & Party Chocolates</h3>
+          <p class="muted">Wedding favors, corporate event gifts, party return gifts. Custom packaging with logos and personalized messages for NCR events.</p>
         </div>
         <div class="card mini">
-          <h3 style="margin:0 0 8px">For Business Supply</h3>
-          <p class="muted">Hotels, pubs, cafés. Regular supply, seasonal menus, and logo‑embossed bars on request.</p>
+          <h3 style="margin:0 0 8px">Corporate Bulk Orders</h3>
+          <p class="muted">Business gifts, hotel supplies, café partnerships. Bulk chocolate orders with logo embossing. Regular supply contracts in Delhi NCR.</p>
         </div>
       </section>
 
       <section class="section" id="gallery">
-        <h3>Photo Gallery</h3>
-        <p class="muted">A glimpse of our recent makes. Tap to enlarge.</p>
+        <h3>Handmade Chocolate Gallery - Delhi NCR</h3>
+        <p class="muted">Our finest handcrafted chocolates, corporate gifts, and wedding favors delivered across Gurgaon, Noida, and Delhi. Tap to enlarge.</p>
         <div class="gallery">
-          <a class="g" href="/gallery/1.png"><img src="/gallery/1.png" alt="Chocolate assortment"></a>
-          <a class="g" href="/gallery/2.png"><img src="/gallery/2.png" alt="Truffle box"></a>
-          <a class="g" href="/gallery/3.png"><img src="/gallery/3.png" alt="Gift hamper"></a>
-          <a class="g" href="/gallery/4.png"><img src="/gallery/4.png" alt="Logo chocolate bars"></a>
-          <a class="g" href="/gallery/5.png"><img src="/gallery/5.png" alt="Party platter"></a>
-          <a class="g" href="/gallery/6.png"><img src="/gallery/6.png" alt="Almond bark"></a>
-          <a class="g" href="/gallery/7.png"><img src="/gallery/7.png" alt="Berry truffles"></a>
-          <a class="g" href="/gallery/8.png"><img src="/gallery/8.png" alt="Wedding favors"></a>
+          <a class="g" href="/gallery/1.png"><img src="/gallery/1.png" alt="Handmade chocolate assortment Delhi NCR corporate gifts"></a>
+          <a class="g" href="/gallery/2.png"><img src="/gallery/2.png" alt="Premium truffle gift box Gurgaon Noida delivery"></a>
+          <a class="g" href="/gallery/3.png"><img src="/gallery/3.png" alt="Corporate chocolate hamper bulk orders Delhi"></a>
+          <a class="g" href="/gallery/4.png"><img src="/gallery/4.png" alt="Custom logo chocolate bars corporate branding NCR"></a>
+          <a class="g" href="/gallery/5.png"><img src="/gallery/5.png" alt="Wedding chocolate favors party platter Delhi"></a>
+          <a class="g" href="/gallery/6.png"><img src="/gallery/6.png" alt="Artisan almond bark handmade chocolates Gurgaon"></a>
+          <a class="g" href="/gallery/7.png"><img src="/gallery/7.png" alt="Gourmet berry truffles premium chocolates Noida"></a>
+          <a class="g" href="/gallery/8.png"><img src="/gallery/8.png" alt="Wedding chocolate favors custom packaging Delhi NCR"></a>
         </div>
         <div class="lightbox" id="lightbox" aria-hidden="true"><img alt="Expanded photo"></div>
       </section>
-
+<!-- 
       <section class="section" id="contact">
         <h3>Order / Enquiry</h3>
         <div class="contact">
@@ -253,12 +337,12 @@
             </form>
           </div>
         </div>
-      </section>
+      </section> -->
     </main>
 
     <footer class="footer">
-      <div>© <span id="yr"></span> Handmade Chocolates. All rights reserved.</div>
-      <div class="muted">Made locally in Gurgaon • Pan‑India shipping via partner couriers</div>
+      <div>© <span id="yr"></span> CandyCraver - Premium Handmade Chocolates Delhi NCR. All rights reserved.</div>
+      <div class="muted">Serving Gurgaon, Noida, Delhi, Faridabad & Greater Noida • Same-day delivery • Corporate bulk orders • Wedding favors</div>
     </footer>
   </div>
 
