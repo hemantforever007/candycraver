@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Handmade Chocolates | Gifts • Parties • Corporate & Bulk</title>
+  <meta name="description" content="Premium handmade chocolates for individual gifting, parties, and business supply. Bulk & custom orders welcome. Call or WhatsApp to order."/>
+  <meta property="og:title" content="Handmade Chocolates – Premium Gifts & Bulk Orders" />
+  <meta property="og:description" content="Small‑batch, handcrafted chocolates for everyone — from birthday boxes to corporate hampers. Call or WhatsApp to order." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/cover.png" />
+  <meta name="theme-color" content="#2b1d17" />
+  <link rel="icon" href="/favicon.png" sizes="any">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600..900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f0b09; /* cocoa dark */
+      --choc:#2b1d17;
+      --gold:#c9ae7b;
+      --cream:#fff9f2;
+      --text:#f6eee5;
+      --muted:#d3c7bc;
+      --accent:#ffe6c6;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; background:
+        radial-gradient(1200px 700px at 120% -10%, #432c22 0%, transparent 60%),
+        radial-gradient(900px 600px at -10% 110%, #251812 0%, transparent 60%),
+        var(--bg);
+      color:var(--text);
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Helvetica,Arial,sans-serif;
+      line-height:1.5;
+      overflow-x:hidden;
+    }
+    a{color:inherit}
+    .wrap{max-width:1320px;margin:0 auto;padding:28px}
+    header{position:relative; z-index:2; display:flex; align-items:center; justify-content:space-between; gap:16px}
+    .brand{display:flex;align-items:center;gap:14px;text-decoration:none}
+    .logo{
+      width:54px;height:54px; border-radius:16px; display:grid; place-items:center;
+      background: conic-gradient(from 210deg, #3a241b, #6b3f2b, #3a241b);
+      box-shadow:0 10px 28px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.06);
+      position:relative; overflow:hidden; font-size:26px
+    }
+    .logo:after{content:""; position:absolute; inset:0; background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,.15) 50%, transparent 58%); transform: translateX(-120%); animation: sheen 6s infinite}
+    @keyframes sheen{0%{transform:translateX(-120%)} 30%{transform:translateX(120%)} 100%{transform:translateX(120%)}}
+    .brand h1{font-family:"Playfair Display",serif; font-weight:800; font-size:clamp(22px,3.2vw,32px); letter-spacing:.2px; margin:0}
+    .tag{color:var(--muted); font-size:14px}
+
+    .hero{position:relative; padding:90px 0 56px;}
+    .hero-grid{display:grid; grid-template-columns: 1.2fr .8fr; align-items:center; gap:min(6vw,64px)}
+    .headline{font-family:"Playfair Display",serif; font-size:clamp(44px,6.8vw,84px); line-height:1.04; margin:0 0 14px}
+    .sub{color:var(--muted); font-size: clamp(17px,2.1vw,20px); max-width:70ch}
+
+    .cta-row{display:flex;gap:14px; flex-wrap:wrap; margin-top:28px}
+    .btn{display:inline-flex; align-items:center; gap:10px; text-decoration:none; padding:16px 20px; border-radius:18px; font-weight:700; letter-spacing:.3px; border:1px solid rgba(255,255,255,.12); backdrop-filter: blur(8px)}
+    .btn.primary{background:linear-gradient(180deg, #ddbf87, #a48756); color:#24160f; box-shadow: 0 12px 26px rgba(197,165,114,.28)}
+    .btn.ghost{color:var(--text); background:rgba(255,255,255,.07)}
+
+    .phone{font-size:clamp(22px,3.4vw,30px); font-weight:800; color:var(--accent)}
+
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      border:1px solid rgba(255,255,255,.1);
+      border-radius:22px; padding:22px; box-shadow: 0 12px 32px rgba(0,0,0,.28);
+    }
+    .badges{display:flex; gap:8px; flex-wrap:wrap; margin:18px 0 0}
+    .badge{font-size:12px; padding:8px 11px; border-radius:999px; background:rgba(255,255,255,.07); border:1px dashed rgba(255,255,255,.14); color:var(--muted)}
+
+    .showcase{display:grid; grid-template-columns:repeat(3,1fr); gap:14px}
+    .tile{position:relative; aspect-ratio:1; border-radius:18px; overflow:hidden; background:
+      radial-gradient(60% 80% at 70% 20%, rgba(255,255,255,.1), transparent 60%),
+      linear-gradient(120deg, #6a3d2b, #3f241b);
+      box-shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    .tile img{width:100%;height:100%;object-fit:cover;display:block}
+
+    .grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
+    .mini{padding:18px}
+
+    .section{margin:64px 0 0}
+    .section h3{font-family:"Playfair Display",serif; font-size:clamp(26px,3vw,34px); margin:0 0 12px}
+    .muted{color:var(--muted)}
+
+    /* Gallery */
+    .gallery{display:grid; grid-template-columns:repeat(4,1fr); gap:14px}
+    .gallery .g{position:relative; border-radius:18px; overflow:hidden; cursor:pointer;}
+    .gallery .g img{width:100%;height:100%;object-fit:cover; display:block; aspect-ratio:1}
+    .gallery .g:after{content:""; position:absolute; inset:0; background:linear-gradient(180deg, transparent, rgba(0,0,0,.18));}
+
+    .lightbox{position:fixed; inset:0; background:rgba(0,0,0,.8); display:none; align-items:center; justify-content:center; z-index:50}
+    .lightbox img{max-width:92vw; max-height:88vh; border-radius:14px; box-shadow:0 20px 60px rgba(0,0,0,.5)}
+    .lightbox.open{display:flex}
+
+    /* Contact */
+    .contact{display:grid; grid-template-columns: .9fr 1.1fr; gap:20px; align-items:start}
+    .contact .big{font-size:clamp(22px,3vw,28px)}
+    form{display:grid; gap:12px}
+    .row{display:grid; grid-template-columns:1fr 1fr; gap:12px}
+    input, textarea, select{
+      background:rgba(255,255,255,.06); color:var(--text); border:1px solid rgba(255,255,255,.12); border-radius:14px; padding:12px 14px; font:inherit
+    }
+    textarea{min-height:110px; resize:vertical}
+    .hint{font-size:12px; color:var(--muted)}
+
+    .footer{padding:36px 0 80px; color:var(--muted); font-size:14px}
+
+    /* Responsive */
+    @media (max-width: 1000px){
+      .hero{padding:70px 0 36px}
+      .hero-grid{grid-template-columns:1fr;}
+      .gallery{grid-template-columns:repeat(3,1fr)}
+      .contact{grid-template-columns:1fr}
+    }
+    @media (max-width: 640px){
+      .gallery{grid-template-columns:repeat(2,1fr)}
+      .showcase{grid-template-columns:repeat(2,1fr)}
+      .grid{grid-template-columns:1fr}
+    }
+
+    /* Floating cocoa swirl */
+    .swirl{ position:absolute; inset:auto -10vw -20vh auto; width:min(70vw,1000px); height:min(70vw,1000px);
+      filter: blur(40px) saturate(1.2); opacity:.25; pointer-events:none;
+      background: radial-gradient(circle at 50% 50%, #6b3f2b, transparent 55%), radial-gradient(circle at 30% 20%, #342016, transparent 40%), radial-gradient(circle at 70% 70%, #8a5136, transparent 45%);
+      border-radius:50%; animation: floaty 22s ease-in-out infinite alternate}
+    @keyframes floaty{ from{transform:translate(10px, 0) rotate(0deg)} to{transform:translate(-30px, -20px) rotate(12deg)} }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Handmade Chocolates",
+    "image": ["/cover.png"],
+    "description": "Handcrafted chocolates for gifts, parties, and bulk supply.",
+    "address": {"@type": "PostalAddress", "addressLocality": "Gurgaon", "addressRegion": "Haryana", "addressCountry": "IN"},
+    "areaServed": "India",
+    "telephone": "+91-8368022314"
+  }
+  </script>
+</head>
+<body>
+  <div class="swirl" aria-hidden="true"></div>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="#top" aria-label="Homepage">
+        <div class="logo" aria-hidden="true">🍫</div>
+        <div>
+          <h1>Handmade Chocolates</h1>
+          <div class="tag">Small‑batch • Eggless • Preservative‑free</div>
+        </div>
+      </a>
+      <div class="phone">
+        <a id="callLink" href="tel:+91-8368022314">+91‑8368022314</a>
+      </div>
+    </header>
+
+    <main class="hero">
+      <div class="hero-grid">
+        <section>
+          <h2 class="headline">Premium, handcrafted chocolates for <span style="color:var(--gold)">gifts</span>, parties & businesses.</h2>
+          <p class="sub">From birthday boxes and festive hampers to event platters and logo‑stamped bars — we make fresh chocolate for <strong>individuals and corporates alike</strong>. Custom flavours, vegan on request, and personalised sleeves available.</p>
+          <div class="badges">
+            <span class="badge">Individuals & Families</span>
+            <span class="badge">Parties & Weddings</span>
+            <span class="badge">Corporate & Bulk</span>
+            <span class="badge">100% Vegetarian</span>
+            <span class="badge">Gift‑ready Packaging</span>
+          </div>
+          <div class="cta-row">
+            <a class="btn primary" id="waLink" href="#" target="_blank" rel="noopener">WhatsApp Now</a>
+            <a class="btn ghost" href="#contact">Leave your number/email</a>
+          </div>
+        </section>
+        <aside>
+          <div class="card">
+            <div class="showcase" aria-label="Showcase of chocolate styles">
+              <div class="tile"><img src="/gallery/1.png" alt="Assorted bonbons" loading="lazy"></div>
+              <div class="tile"><img src="/gallery/6.png" alt="Roasted almond bark" loading="lazy"></div>
+              <div class="tile"><img src="/gallery/7.png" alt="Berry truffles" loading="lazy"></div>
+              <div class="tile"><img src="/gallery/4.png" alt="Sea‑salt caramel" loading="lazy"></div>
+              <div class="tile"><img src="/gallery/2.png" alt="Logo‑stamped bars" loading="lazy"></div>
+              <div class="tile"><img src="/gallery/3.png" alt="Gift hampers" loading="lazy"></div>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <section class="section grid">
+        <div class="card mini">
+          <h3 style="margin:0 0 8px">For Individuals</h3>
+          <p class="muted">Birthday boxes, festive gifts, thank‑you packs. Choose 6/9/12/24‑piece assortments or custom bars.</p>
+        </div>
+        <div class="card mini">
+          <h3 style="margin:0 0 8px">For Events</h3>
+          <p class="muted">Weddings, parties, corporate events. Dessert platters, return‑gifts, custom sleeves & tags.</p>
+        </div>
+        <div class="card mini">
+          <h3 style="margin:0 0 8px">For Business Supply</h3>
+          <p class="muted">Hotels, pubs, cafés. Regular supply, seasonal menus, and logo‑embossed bars on request.</p>
+        </div>
+      </section>
+
+      <section class="section" id="gallery">
+        <h3>Photo Gallery</h3>
+        <p class="muted">A glimpse of our recent makes. Tap to enlarge.</p>
+        <div class="gallery">
+          <a class="g" href="/gallery/1.png"><img src="/gallery/1.png" alt="Chocolate assortment"></a>
+          <a class="g" href="/gallery/2.png"><img src="/gallery/2.png" alt="Truffle box"></a>
+          <a class="g" href="/gallery/3.png"><img src="/gallery/3.png" alt="Gift hamper"></a>
+          <a class="g" href="/gallery/4.png"><img src="/gallery/4.png" alt="Logo chocolate bars"></a>
+          <a class="g" href="/gallery/5.png"><img src="/gallery/5.png" alt="Party platter"></a>
+          <a class="g" href="/gallery/6.png"><img src="/gallery/6.png" alt="Almond bark"></a>
+          <a class="g" href="/gallery/7.png"><img src="/gallery/7.png" alt="Berry truffles"></a>
+          <a class="g" href="/gallery/8.png"><img src="/gallery/8.png" alt="Wedding favors"></a>
+        </div>
+        <div class="lightbox" id="lightbox" aria-hidden="true"><img alt="Expanded photo"></div>
+      </section>
+
+      <section class="section" id="contact">
+        <h3>Order / Enquiry</h3>
+        <div class="contact">
+          <div class="card mini">
+            <p class="big">Prefer calling? Reach us at</p>
+            <p class="big"><strong><a id="callLink2" href="tel:+91-8368022314">+91‑8368022314</a></strong></p>
+            <p><a id="waLink2" class="btn primary" href="#" target="_blank" rel="noopener">WhatsApp your enquiry</a></p>
+            <p class="muted">Business hours: 10 AM – 8 PM (IST). Same‑day fulfilment subject to availability.</p>
+          </div>
+          <div class="card mini">
+            <form id="leadForm">
+              <div class="row">
+                <input type="text" name="name" placeholder="Your name" required>
+                <input type="tel" name="phone" placeholder="Phone number" required>
+              </div>
+              <div class="row">
+                <input type="email" name="email" placeholder="Email (optional)">
+                <select name="orderType" aria-label="Order type">
+                  <option value="Individual Gift">Individual Gift</option>
+                  <option value="Party / Wedding">Party / Wedding</option>
+                  <option value="Corporate / Bulk">Corporate / Bulk</option>
+                  <option value="Hotel / Pub Supply">Hotel / Pub Supply</option>
+                </select>
+              </div>
+              <div class="row">
+                <input type="number" name="qty" placeholder="Approx. quantity (pcs)" min="1">
+                <input type="date" name="date" placeholder="Preferred date">
+              </div>
+              <textarea name="msg" placeholder="Tell us flavours, packaging, logo, or any notes…"></textarea>
+              <button class="btn primary" type="submit">Send Enquiry</button>
+              <div class="hint">We’ll call or WhatsApp you back within business hours. By submitting, you consent to be contacted for this enquiry.</div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>© <span id="yr"></span> Handmade Chocolates. All rights reserved.</div>
+      <div class="muted">Made locally in Gurgaon • Pan‑India shipping via partner couriers</div>
+    </footer>
+  </div>
+
+  <script>
+    const PHONE = "+91-8368022314";
+    const WHATSAPP = "+91-8368022314";
+    const EMAIL = "hemantforever007@gmail.com";
+
+    function digitsOnlyPlus(s){return (s||"").split("").filter(ch=> (ch>='0'&&ch<='9') || ch==='+').join("");}
+    function digitsOnly(s){return (s||"").split("").filter(ch=> (ch>='0'&&ch<='9')).join("");}
+    function fmtPhone(p){
+      const clean = digitsOnlyPlus(p);
+      if(clean.startsWith("+91") && clean.length===13){
+        const a = clean.slice(0,3), b = clean.slice(3,8), c = clean.slice(8);
+        return a+"‑"+b+"‑"+c;
+      }
+      return clean;
+    }
+
+    const callLink = document.getElementById('callLink');
+    const callLink2 = document.getElementById('callLink2');
+    const waLink = document.getElementById('waLink');
+    const waLink2 = document.getElementById('waLink2');
+
+    if (PHONE && PHONE.indexOf('X')===-1){
+      [callLink, callLink2].forEach(a=>{ if(a){a.href = 'tel:'+PHONE; a.textContent = fmtPhone(PHONE)} });
+    }
+    if (WHATSAPP && WHATSAPP.indexOf('X')===-1){
+      const clean = digitsOnly(WHATSAPP);
+      [waLink, waLink2].forEach(a=>{ if(a){a.href = 'https://wa.me/'+clean;} });
+    }
+
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    const form = document.getElementById('leadForm');
+    form.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(form).entries());
+      const lines = [
+        'New chocolate enquiry',
+        'Name: '+(data.name||''),
+        'Phone: '+(data.phone||''),
+        data.email?('Email: '+data.email):'',
+        data.orderType?('Type: '+data.orderType):'',
+        data.qty?('Qty: '+data.qty+' pcs'):'',
+        data.date?('Date: '+data.date):'',
+        data.msg?('Notes: '+data.msg):''
+      ].filter(Boolean);
+      const summary = encodeURIComponent(lines.join('\n'));
+
+      if (WHATSAPP && WHATSAPP.indexOf('X')===-1){
+        const to = digitsOnly(WHATSAPP);
+        window.open('https://wa.me/'+to+'?text='+summary, '_blank');
+      } else if (EMAIL){
+        window.location.href = 'mailto:'+EMAIL+'?subject=Chocolate%20Enquiry&body='+summary;
+      } else {
+        alert('Thanks! We will contact you shortly.');
+      }
+      form.reset();
+    });
+
+    const lb = document.getElementById('lightbox');
+    const lbImg = lb.querySelector('img');
+    document.querySelectorAll('.gallery .g').forEach(a=>{
+      a.addEventListener('click', (e)=>{
+        e.preventDefault();
+        const img = a.querySelector('img');
+        if(!img) return;
+        lbImg.src = img.getAttribute('src');
+        lb.classList.add('open');
+        lb.setAttribute('aria-hidden','false');
+      });
+    });
+    lb.addEventListener('click', ()=>{ lb.classList.remove('open'); lb.setAttribute('aria-hidden','true'); });
+  </script>
+</body>
+</html>
